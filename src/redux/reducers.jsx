@@ -4,12 +4,12 @@ const todoSlice = createSlice({
     initialState:[],
     reducers:{
         addTodo:(state,action)=>{
-            state.push({id: Date.now(),text:action.payload,completed:false})
+            state.push({id: Date.now(),text:action.payload,done:false})
         },
         toggletodo :(state,action)=>{
             const todo = state.find(todo=>todo.id === action.payload)
             if(todo){
-                todo.completed = !todo.completed
+                todo.done = !todo.done
             }
         },
         removetodo:(state,action)=>{
@@ -18,5 +18,5 @@ const todoSlice = createSlice({
     }
 })
 
-const {addTodo,toggletodo,removetodo}=todoSlice.actions;
+export const {addTodo,toggletodo,removetodo}=todoSlice.actions;
 export default todoSlice.reducer
