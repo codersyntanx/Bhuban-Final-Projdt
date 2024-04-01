@@ -55,3 +55,16 @@ ul{
 .coveroficon i{
     color: red;
 }
+.buttonformodal{
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+    margin: auto;
+}

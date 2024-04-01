@@ -12,6 +12,7 @@ const handletodo =()=>{
   if(addtodos.trim() !== ""){
     dispatch(addTodo(addtodos.trim()))
     setAddtodos("")
+    setIsmodalopen(false)
   }
 }
 const handletoggletodo = (id)=>{
@@ -24,9 +25,7 @@ const handledeletetodo = (id)=>{
         <>
                     
       <h1>TODO LIST</h1>
-<input type='text' className="inputtake" value={addtodos} onChange={(e)=>{setAddtodos(e.target.value)}}
-placeholder='Add your work...'></input>
-<button className="addtodobtn" onClick={handletodo}>Add Todo</button>
+
 
     <ul>
   {
@@ -67,8 +66,18 @@ placeholder='Add your work...'></input>
   }
 
 </ul>
-<Modal>
-
+<div className="buttonformodal" onClick={()=>{setIsmodalopen(true)}}><i class="fa-solid fa-plus"></i></div>
+<Modal
+open={ismodalopen}
+onCancel={()=>{setIsmodalopen(false)}}
+closeIcon={null}
+footer={null}
+width={600}
+height={300}
+>
+<input type='text' className="inputtake" value={addtodos} onChange={(e)=>{setAddtodos(e.target.value)}}
+placeholder='Add your work...'></input>
+<button className="addtodobtn" onClick={handletodo}>Add Todo</button>
 </Modal>
 
         </>
