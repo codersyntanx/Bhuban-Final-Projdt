@@ -1,3 +1,57 @@
 .App{
     text-align: center;
 }
+body{
+    background-color: aqua;
+}
+.inputtake{
+    height: 30px;
+    border-radius: 8px;
+    width: 400px;
+    border: 2px solid rgb(147, 145, 145);
+}
+.addtodobtn{
+    margin-left: 10px;
+    height: 36px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(4, 133, 49);
+    font-weight: bold;
+    border: none;
+}
+ul li{
+    list-style: none;
+    text-align: left;
+ display: flex;
+ gap: 20px;
+}
+ul{
+    padding-left: 0px;
+}
+.coverofli{
+    margin: auto;
+    width: 500px;
+     
+    background: #e1e0e0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.coverofli:hover{
+   
+  
+    box-shadow: 4px 2px 10px 0px grey;
+    transition: .5s;
+
+}
+.item{
+    width: 400px;
+}
+.coveroficon i{
+    color: red;
+}
